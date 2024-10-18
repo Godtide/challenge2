@@ -14,7 +14,7 @@ node solutions
 ```
 
 - **Endpoints:**
-  - POST /pay: Process payment.__
+  - POST /pay: Process payment.<br />
   Add request body  ` { amount: number, payerId:string, payeeId: string }`;
   - GET /status/:reference: Check transaction status.
   
