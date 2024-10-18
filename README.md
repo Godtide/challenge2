@@ -14,8 +14,8 @@ node solutions
 ```
 
 - **Endpoints:**
-  - POST /pay: Process payment.
-  Add request body  `const { amount, payerId, payeeId } = req.body`;
+  - POST /pay: Process payment.__
+  Add request body  ` { amount: number, payerId:string, payeeId: string }`;
   - GET /status/:reference: Check transaction status.
   
 
