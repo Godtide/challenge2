@@ -18,5 +18,11 @@ node solutions
   Add request body  ` { amount: number, payerId:string, payeeId: string }`;
   - GET /status/:reference: Check transaction status.
   
+# test for idempotency 
+Add reference to post body like below<br />
+`const { amount, payerId, payeeId, reference } = req.body`; on line 14<br />
+ We make sure the request is not same by generating a new reference. so comment out the next line 15<br />
+     // const reference = uuidv4();<br />
+ save and restart script
 
 
