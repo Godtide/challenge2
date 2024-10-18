@@ -15,19 +15,8 @@ node solutions
 
 - **Endpoints:**
   - POST /pay: Process payment.
+  Add request body  `const { amount, payerId, payeeId } = req.body`;
   - GET /status/:reference: Check transaction status.
+  
 
-# test for idempotency 
-
-Add reference to post body like below
-
-`const { amount, payerId, payeeId, reference } = req.body`; on line 14
-   
- We make sure the request is not same by generating a new reference. so comment out the next line 15
-     // const reference = uuidv4();
-
- A more robust solution using the DB will have the idempotency key stored using the concatenated string of the request parameters and reference.
-
-# test for succesful response
-comment line 30 -34, save, restart the server
 
