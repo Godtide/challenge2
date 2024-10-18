@@ -12,7 +12,7 @@ let transactions = {};
 // POST: /pay 
 app.post('/pay', async (req, res) => {
     const { amount, payerId, payeeId } = req.body;
-     const reference = uuidv4();
+     const reference =  amount.toString()+payerId+payeeId;
 
     // Ensure idempotency
     if (transactions[reference]) {
